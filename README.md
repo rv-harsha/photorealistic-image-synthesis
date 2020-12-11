@@ -23,3 +23,27 @@ setup.sh file placed in the root of this repository has all the steps necessary 
 
 ### GAN Training
 - GAN Training.ipynb file has the required to start a GAN training.
+
+## Code Structure
+
+- `train.py`, `test.py`: the entry point for training and testing.
+- `trainers/pix2pix_trainer.py`: harnesses and reports the progress of training.
+- `models/pix2pix_model.py`: creates the networks, and compute the losses
+- `models/networks/`: defines the architecture of all models
+- `options/`: creates option lists using `argparse` package. More individuals are dynamically added in other files as well. Please see the section below.
+- `data/`: defines the class for loading images and label maps.
+
+## Options
+
+ To address this, the `BaseOption` class dynamically loads and sets options depending on what model, network, and datasets are used. This is done by calling the static method `modify_commandline_options` of various classes. It takes in the`parser` of `argparse` package and modifies the list of options. 
+
+## VAE-Style Training with an Encoder For Style Control and Multi-Modal Outputs
+
+To train our model along with an image encoder to enable multi-modal outputs as in Figure 15 of the [paper](https://arxiv.org/pdf/1903.07291.pdf), please use `--use_vae`. The model will create `netE` in addition to `netG` and `netD` and train with KL-Divergence loss.
+
+## Acknowledgments
+We have borrowed the code from NVLabs [SPADE](https://github.com/NVlabs/SPADE) repository. 
+The code is modified to our requirement and used for academic purpose only.
+
+
+ For commercial use, please contact [researchinquiries@nvidia.com](researchinquiries@nvidia.com). Please check the SPADE link for License and usage terms and  conditions.
