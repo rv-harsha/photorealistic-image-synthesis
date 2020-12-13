@@ -10,10 +10,11 @@ setup.sh file placed in the root of this repository has all the steps necessary 
 - Download original train images from drive and add it to datasets directory
 - Download and enable Synchronized Batch Norm. 
 - Install Spade dependencies. 
-- Start training.
+- The command to execute train/test.
 
 ## Dataset Creation
 - Download the raw images from [Places365](http://places2.csail.mit.edu/index.html) dataset.
+- The train images should be stored under datasets as datasets/Places365/train_A - path to annotated label maps and datasets/Places365/train_B - path to original images. Similarly, store the val images as datasets/Places365/val_A and datasets/Places365/val_B 
 
 ### Generate Semantic maps from raw images
 - Image Segmentation.ipynb file has the code to generate semantic maps using CSAILVision pre-trained encoder and decoder on ADE20K.
@@ -35,7 +36,13 @@ setup.sh file placed in the root of this repository has all the steps necessary 
 
 ## Options
 
- To address this, the `BaseOption` class dynamically loads and sets options depending on what model, network, and datasets are used. This is done by calling the static method `modify_commandline_options` of various classes. It takes in the`parser` of `argparse` package and modifies the list of options. 
+ The base_options.py has list of default arguments available while running testing and training. The train_options.py has list of options for training which can be viewed by running "python train.py --help". Similarly we can view test options in the same way as well. 
+
+## Additional Info
+
+ - The model architectures for generator, discriminator and image encoder are printed in respective .txt files under **info** folder. 
+ - The loss_log.txt file is a the training loss log file.
+ - opt.txt corresponds to the arguments/options that were set during the training. 
 
 ## VAE-Style Training with an Encoder For Style Control and Multi-Modal Outputs
 

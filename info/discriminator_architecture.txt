@@ -1,0 +1,62 @@
+MultiscaleDiscriminator(
+  (discriminator_0): NLayerDiscriminator(
+    (model0): Sequential(
+      (0): Conv2d(153, 88, kernel_size=(4, 4), stride=(2, 2), padding=(2, 2))
+      (1): LeakyReLU(negative_slope=0.2)
+    )
+    (model1): Sequential(
+      (0): Sequential(
+        (0): Conv2d(88, 176, kernel_size=(4, 4), stride=(2, 2), padding=(2, 2), bias=False)
+        (1): InstanceNorm2d(176, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+      )
+      (1): LeakyReLU(negative_slope=0.2)
+    )
+    (model2): Sequential(
+      (0): Sequential(
+        (0): Conv2d(176, 352, kernel_size=(4, 4), stride=(2, 2), padding=(2, 2), bias=False)
+        (1): InstanceNorm2d(352, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+      )
+      (1): LeakyReLU(negative_slope=0.2)
+    )
+    (model3): Sequential(
+      (0): Sequential(
+        (0): Conv2d(352, 512, kernel_size=(4, 4), stride=(1, 1), padding=(2, 2), bias=False)
+        (1): InstanceNorm2d(512, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+      )
+      (1): LeakyReLU(negative_slope=0.2)
+    )
+    (model4): Sequential(
+      (0): Conv2d(512, 1, kernel_size=(4, 4), stride=(1, 1), padding=(2, 2))
+    )
+  )
+  (discriminator_1): NLayerDiscriminator(
+    (model0): Sequential(
+      (0): Conv2d(153, 88, kernel_size=(4, 4), stride=(2, 2), padding=(2, 2))
+      (1): LeakyReLU(negative_slope=0.2)
+    )
+    (model1): Sequential(
+      (0): Sequential(
+        (0): Conv2d(88, 176, kernel_size=(4, 4), stride=(2, 2), padding=(2, 2), bias=False)
+        (1): InstanceNorm2d(176, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+      )
+      (1): LeakyReLU(negative_slope=0.2)
+    )
+    (model2): Sequential(
+      (0): Sequential(
+        (0): Conv2d(176, 352, kernel_size=(4, 4), stride=(2, 2), padding=(2, 2), bias=False)
+        (1): InstanceNorm2d(352, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+      )
+      (1): LeakyReLU(negative_slope=0.2)
+    )
+    (model3): Sequential(
+      (0): Sequential(
+        (0): Conv2d(352, 512, kernel_size=(4, 4), stride=(1, 1), padding=(2, 2), bias=False)
+        (1): InstanceNorm2d(512, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+      )
+      (1): LeakyReLU(negative_slope=0.2)
+    )
+    (model4): Sequential(
+      (0): Conv2d(512, 1, kernel_size=(4, 4), stride=(1, 1), padding=(2, 2))
+    )
+  )
+)

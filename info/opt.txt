@@ -1,0 +1,68 @@
+            D_steps_per_G: 1                             
+             aspect_ratio: 1.0                           
+                batchSize: 16                            	[default: 1]
+                    beta1: 0.0                           
+                    beta2: 0.9                           
+      cache_filelist_read: True                          	[default: False]
+     cache_filelist_write: True                          	[default: False]
+          checkpoints_dir: ./checkpoints                 
+   contain_dontcare_label: False                         
+           continue_train: True                          	[default: False]
+                crop_size: 256                           
+                 dataroot: datasets/Places365            	[default: ./datasets/cityscapes/]
+             dataset_mode: custom                        	[default: coco]
+                    debug: False                         
+             display_freq: 100                           
+          display_winsize: 256                           
+                 gan_mode: hinge                         
+                  gpu_ids: 0,1,2,3                       	[default: 0]
+                image_dir: datasets/Places365/train_B    	[default: None]
+                init_type: xavier                        
+            init_variance: 0.02                          
+             instance_dir:                               
+                  isTrain: True                          	[default: None]
+                label_dir: datasets/Places365/train_A    	[default: None]
+                 label_nc: 150                           	[default: 13]
+              lambda_feat: 10.0                          
+               lambda_kld: 0.05                          
+               lambda_vgg: 10.0                          
+       load_from_opt_file: False                         
+                load_size: 256                           	[default: 286]
+                       lr: 0.0003                        	[default: 0.0002]
+         max_dataset_size: 9223372036854775807           
+                    model: pix2pix                       
+                 nThreads: 0                             
+               n_layers_D: 4                             
+                     name: Places365                     	[default: label2coco]
+                      ndf: 88                            	[default: 64]
+                      nef: 32                            	[default: 16]
+                     netD: multiscale                    
+             netD_subarch: n_layer                       
+                     netG: spade                         
+                      ngf: 88                            	[default: 64]
+                    niter: 60                            	[default: 50]
+              niter_decay: 0                             
+                  no_TTUR: False                         
+                  no_flip: False                         
+          no_ganFeat_loss: False                         
+                  no_html: False                         
+              no_instance: True                          	[default: False]
+         no_pairing_check: True                          	[default: False]
+              no_vgg_loss: False                         
+                   norm_D: spectralinstance              
+                   norm_E: spectralinstance              
+                   norm_G: spectralspadesyncbatch3x3     
+                    num_D: 2                             
+    num_upsampling_layers: normal                        
+                optimizer: adam                          
+                output_nc: 3                             
+                    phase: train                         
+          preprocess_mode: none                          	[default: resize_and_crop]
+               print_freq: 100                           
+          save_epoch_freq: 1                             	[default: 10]
+         save_latest_freq: 5000                          
+           serial_batches: True                          	[default: False]
+                   tf_log: True                          	[default: False]
+                  use_vae: True                          	[default: False]
+              which_epoch: 32                            	[default: latest]
+                    z_dim: 256                           

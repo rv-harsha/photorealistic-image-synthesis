@@ -70,3 +70,23 @@ python train.py --name Places365 \
     --lambda_feat 15 \
     --lambda_vgg 15 \
     --use_vae
+
+# Uncomment the below code to run the test. 
+
+# !python test.py --name Places365 \
+#     --dataset_mode custom \
+#     --phase test \
+#     --batchSize 16 \
+#     --label_nc 150 \
+#     --how_many 949\
+#     --load_size 256 \
+#     --crop_size 256 \
+#     --ngf 88 \
+#     --nef 32 \
+#     --no_pairing_check \
+#     --preprocess_mode none \
+#     --no_instance \
+#     --label_dir /content/drive/MyDrive/EE599_Project/Datasets/val_A \
+#     --image_dir /content/drive/MyDrive/EE599_Project/Datasets/val_B \
+#     --dataroot /content/SPADE/datasets/Places365 \
+#     --use_vae
