@@ -1,4 +1,4 @@
-## Photorealistic image sythesis using Spatially Adaptive DEnormalization (SPADE)
+## Photorealistic image sythesis using Conditional GAN (SPADE)
 The project was implemented as part of EE599 Deep Learning Course as the final term project
 
 ## Setup (on AWS)
