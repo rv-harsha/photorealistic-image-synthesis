@@ -1,5 +1,5 @@
 ## Photorealistic image sythesis using Conditional GAN (SPADE)
-The project was implemented as part of EE599 Deep Learning Course as the final term project
+The project was implemented as part of EE599 Deep Learning Course as the final term project. The complete Project Report is provided in the Project_Report.pdf
 
 ## Setup (on AWS)
 setup.sh file placed in the root of this repository has all the steps necessary to install base libraries, download datasets from drive, setup and install SPADE and its dependencies. Checkout the paths and run the setup.sh. 
